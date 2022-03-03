@@ -6,10 +6,9 @@ from driver.queues import QUEUE
 from pyrogram import Client, filters
 from program.utils.inline import menu_markup, stream_markup
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
-
 from config import (
     BOT_USERNAME,
-    BG_IMG,
+    START_IMG_URL ,
     GROUP_SUPPORT,
     OWNER_USERNAME,
     UPDATES_CHANNEL,
@@ -17,7 +16,7 @@ from config import (
     OWNER_ID,
 )
 
-
+   START_IMG_URL = None
 
 @Client.on_callback_query(filters.regex("home_start"))
 @check_blacklist()
@@ -53,12 +52,10 @@ async def start_set(_, query: CallbackQuery):
                         "💝 sᴀɴᴛʜᴜ ɴᴇᴛᴡᴏʀᴋ 🤎", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
+                [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
                 [
                     InlineKeyboardButton(
-                        "❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
-                    ), 
-                    InlineKeyboardButton(
-                        "💛 ғᴇᴅᴇʀᴀᴛɪᴏɴ ☺", url="https://t.me/unProfessionalFederation"
+                        "🥺 ʀᴇᴘᴏ", callback_data="repo"),
                     ) 
                 ], 
             ]
@@ -400,3 +397,11 @@ async def on_close_menu(_, query: CallbackQuery):
 @check_blacklist()
 async def in_close_panel(_, query: CallbackQuery):
     await query.message.delete()
+
+
+@Client.on_callback_query(filters.regex("repo"))
+@check_blacklist()
+async def owner_set(_, query: CallbackQuery):
+    user_id = query.from_user.id
+    BOT_NAME = me_bot.first_name
+    await query.answer("🥺 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
