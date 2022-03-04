@@ -56,7 +56,7 @@ async def start_set(_, query: CallbackQuery):
                 [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
                 [
                     InlineKeyboardButton(
-                        "🥺 ʀᴇᴘᴏ", callback_data="repo"),
+                        "🥺 ʀᴇᴘᴏ", callback_data="repo"
                     ) 
                 ], 
             ]
