@@ -57,8 +57,8 @@ async def start_set(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton(
                         "🥺 ʀᴇᴘᴏ", callback_data="repo"
-                    ) 
-                ], 
+                    ), 
+                ] 
             ]
         ), 
         disable_web_page_preview=True,
