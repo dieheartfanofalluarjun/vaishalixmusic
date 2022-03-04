@@ -16,8 +16,6 @@ from config import (
     OWNER_ID,
 )
 
-   START_IMG_URL = None
-
 @Client.on_callback_query(filters.regex("home_start"))
 @check_blacklist()
 async def start_set(_, query: CallbackQuery):
