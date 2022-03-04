@@ -354,7 +354,7 @@ async def in_close_panel(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("repo"))
 @check_blacklist()
-async def owner_set(_, query: CallbackQuery):
+async def repo(_, query: CallbackQuery):
     user_id = query.from_user.id
     BOT_NAME = me_bot.first_name
     await query.answer("🥺 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
