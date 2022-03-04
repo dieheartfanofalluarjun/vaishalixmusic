@@ -6,7 +6,6 @@ from time import time
 
 from config import (
     ALIVE_IMG,
-    START_IMG_URL,
     ALIVE_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
@@ -54,7 +53,10 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
-START_IMG_URL = None
+try:
+    from config import START_IMG_URL
+except:
+    START_IMG_URL = None
 
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
