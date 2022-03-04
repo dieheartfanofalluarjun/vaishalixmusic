@@ -6,7 +6,7 @@ from time import time
 
 from config import (
     ALIVE_IMG,
-    BG_IMG,
+    START_IMG_URL,
     ALIVE_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
@@ -54,6 +54,7 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
+START_IMG_URL = None
 
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
@@ -90,12 +91,10 @@ async def start_(c: Client, message: Message):
                         "💝 sᴀɴᴛʜᴜ ɴᴇᴛᴡᴏʀᴋ 🤎", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
+                [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
                 [
                     InlineKeyboardButton(
-                        "❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
-                    ), 
-                    InlineKeyboardButton(
-                        "💛 ғᴇᴅᴇʀᴀᴛɪᴏɴ ☺", url="https://t.me/unProfessionalFederation"
+                        "🥺 ʀᴇᴘᴏ", callback_data="repo"),
                     ) 
                 ], 
             ]
