@@ -33,19 +33,19 @@ async def thumb(thumbnail, title, userid, ctitle):
     Image.alpha_composite(image5, image6).save(f"search/temp{userid}.png")
     img = Image.open(f"search/temp{userid}.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("driver/source/regular.ttf", 50)
-    font2 = ImageFont.truetype("driver/source/medium.ttf", 72)
+    font = ImageFont.truetype("driver/source/finalfont.ttf", 85)
+    font2 = ImageFont.truetype("driver/source/finalfont.ttf", 60)
     draw.text(
         (20, 45),
-        f"Playing on: {ctitle[:14]}...",
+        f"𝐏𝐋𝐀𝐘𝐈𝐍𝐆 𝐎𝐍: {ctitle[:12]}...",
         fill="white",
         stroke_width=1,
         stroke_fill="white",
         font=font2,
     )
     draw.text(
-        (25, 595),
-        f"{title[:27]}...",
+        (17, 496),
+        f"{title[:13]}...",
         fill="white",
         stroke_width=2,
         stroke_fill="white",
