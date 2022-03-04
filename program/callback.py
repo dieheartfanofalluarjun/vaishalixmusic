@@ -43,7 +43,7 @@ async def start_set(_, query: CallbackQuery):
                 [InlineKeyboardButton("💗 ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʀᴀ ɴɪʙʙᴀ 🤍", callback_data="user_guide")],
                 [
                     InlineKeyboardButton("✅ sᴀɴᴛʜᴜ ᴄᴏᴍᴍᴀɴᴅs 💘", callback_data="command_list"),
-                    InlineKeyboardButton("🔰 ᴅᴏɴᴀᴛᴇ ʀᴀ ɴɪʙʙᴀ 🔰", url=f"https://t.me/{OWNER_USERNAME}"),
+                    InlineKeyboardButton("🔰 ᴅᴏɴᴀᴛᴇ ʀᴀ ɴɪʙʙᴀ 🔰", url=f"https://t.me/{OWNER_USERNAME}")
                 ],
                 [
                     InlineKeyboardButton(
@@ -53,11 +53,8 @@ async def start_set(_, query: CallbackQuery):
                         "💝 sᴀɴᴛʜᴜ ɴᴇᴛᴡᴏʀᴋ 🤎", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
-                [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
-                [
-                    InlineKeyboardButton(
-                        "🥺 ʀᴇᴘᴏ", callback_data="repo"
-                    ), 
+                [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ",
+                                      InlineKeyboardButton("🥺 ʀᴇᴘᴏ", callback_data="repo") 
                 ] 
             ]
         ), 
@@ -109,51 +106,6 @@ async def help(_, query: CallbackQuery):
         disable_web_page_preview=True,
         )
 
-# This is not used it will be added in new update
-'''@Client.on_callback_query(filters.regex("ghelp_command")) 
-@check_blacklist()
-async def ghelp(_, query: CallbackQuery):
-    BOT_NAME = me_bot.first_name
-    await query.answer("help message")
-    await query.edit_message_text(
-        f""" ✨ **ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
-💘 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ sᴇᴛᴜᴘ ᴛʜɪs ʙᴏᴛ? ʀᴇᴀᴅ 💖 sᴇᴛᴛɪɴɢ ᴜᴘ ᴛʜɪs ʙᴏᴛ ɪɴ ɢʀᴏᴜᴘ **\n
-💗 **ᴛᴏ ᴋɴᴏᴡ ᴘʟᴀʏ ᴠɪᴅᴇᴏ/ᴀᴜᴅɪᴏ/ʟɪᴠᴇ? ʀᴇᴀᴅ 💖 ǫᴜɪᴄᴋ ᴜsᴇ ᴄᴏᴍᴍᴀɴᴅs **\n
-💝 **ᴛᴏ ᴋɴᴏᴡ ᴇᴠᴇʀʏ sɪɴɢʟᴇ ᴄᴏᴍᴍᴀɴᴅ ᴏғ ʙᴏᴛ? ʀᴇᴀᴅ 💖 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs**\n """,
-        reply_markup=InlineKeyboardMarkup(
-        
-        [
-            [
-                InlineKeyboardButton(
-                                       "😟ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ💘", url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-            [
-                InlineKeyboardButton( 
-                                       "💝sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs💖", callback_data="sudo_command"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                                       "💚ᴀᴅᴍɪɴ ᴄᴍᴅs💚", callback_data="admin_commands"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                                       "💖sᴀɴᴛʜᴜ ᴄʜᴀɴɴᴇʟ💖", url=f"https://t.me/{UPDATES_CHANNEL}"
-                )
-            ],
-            [
-                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "◁", callback_data="home_start"
-                   ),
-               ]
-            
-            ]      
-     ),
-        disable_web_page_preview=True,
-        )'''
 
 @Client.on_callback_query(filters.regex("quick_use"))
 @check_blacklist()
