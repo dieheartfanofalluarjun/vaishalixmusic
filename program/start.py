@@ -94,7 +94,6 @@ async def start_(c: Client, message: Message):
                     ),
                 ],
                 [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
-                [
                                       InlineKeyboardButton("🥺 ʀᴇᴘᴏ", callback_data="repo") 
                 ] 
             ] 
