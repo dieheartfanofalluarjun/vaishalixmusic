@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from program.utils.inline import menu_markup, stream_markup
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from config import (
-    BOT_USERNAME,,
+    BOT_USERNAME,
     GROUP_SUPPORT,
     OWNER_USERNAME,
     UPDATES_CHANNEL,
