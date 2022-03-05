@@ -74,34 +74,15 @@ async def start_(c: Client, message: Message):
 
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "💙 ɴᴀɴᴜ ᴀᴅᴅ ᴄʜᴇsᴜ ᴋᴏʀᴀ ɴɪʙʙᴀ 💞",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                    )
-                ],
-                [InlineKeyboardButton("💗 ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʀᴀ ɴɪʙʙᴀ 🤍", callback_data="user_guide")],
-                [
-                    InlineKeyboardButton("✅ sᴀɴᴛʜᴜ ᴄᴏᴍᴍᴀɴᴅs 💘", callback_data="command_list"),
-                    InlineKeyboardButton("🔰 ᴅᴏɴᴀᴛᴇ ʀᴀ ɴɪʙʙᴀ 🔰", url=f"https://t.me/{OWNER_USERNAME}"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "💖 ɢʀᴏᴜᴘ ʀᴀ ɴɪʙʙᴀ 💞", url=f"https://t.me/{GROUP_SUPPORT}"
-                    ),
-                    InlineKeyboardButton(
-                        "💝 sᴀɴᴛʜᴜ ɴᴇᴛᴡᴏʀᴋ 🤎", url=f"https://t.me/{UPDATES_CHANNEL}"
-                    ),
-                ],
-                [InlineKeyboardButton("❤ ʏᴏᴜᴛᴜʙᴇ 💚", url="https://youtube.com/channel/UC7QMr8IDR65vciXrwx4XLiQ"
-                                      InlineKeyboardButton("🥺 ʀᴇᴘᴏ", callback_data="repo") 
-                ] 
-            ] 
-        ), 
-        disable_web_page_preview=True,
-    )
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot")
+            ],[
+            InlineKeyboardButton("💙💙", callback_data="repo")
+            ]]
+            ) 
+        ) 
 
 @Client.on_message(
     command(["help", f"help@{BOT_USERNAME}"]) & filters.private & ~filters.edited
