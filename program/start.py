@@ -5,6 +5,7 @@ from sys import version_info
 from time import time
 
 from config import (
+    UPTIME_IMG, 
     PING_IMG, 
     ALIVE_IMG,
     ALIVE_NAME,
