@@ -6,6 +6,7 @@ from time import time
 
 from config import (
     UPTIME_IMG, 
+    START_IMG_URL, 
     PING_IMG, 
     ALIVE_IMG,
     ALIVE_NAME,
@@ -77,12 +78,19 @@ async def start_(c: Client, message: Message):
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot")
             ],[
-            InlineKeyboardButton("💙💙", callback_data="repo")
+            InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            ],[
+            InlineKeyboardButton("📚sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="sudo_command"), 
+            InlineKeyboardButton("📁ᴀᴅᴍɪɴ ᴄᴍᴅs", callback_data="admin_command"), 
+            ],[
+            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
-        ) 
+        ), 
+        disable_web_page_preview=True,
+     ) 
 
 @Client.on_message(
     command(["help", f"help@{BOT_USERNAME}"]) & filters.private & ~filters.edited
