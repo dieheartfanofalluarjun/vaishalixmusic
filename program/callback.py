@@ -46,8 +46,7 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
-        ), 
-        disable_web_page_preview=True,
+        ) 
      ) 
 
 @Client.on_callback_query(filters.regex("help_command"))
