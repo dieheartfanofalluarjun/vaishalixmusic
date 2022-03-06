@@ -8,6 +8,7 @@ from program.utils.inline import menu_markup, stream_markup
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from config import (
     BOT_USERNAME,
+    START_IMG_URL, 
     GROUP_SUPPORT,
     OWNER_USERNAME,
     UPDATES_CHANNEL,
@@ -35,12 +36,19 @@ async def start_set(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot")
             ],[
-            InlineKeyboardButton("💙💙", callback_data="repo")
+            InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            ],[
+            InlineKeyboardButton("📚sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="sudo_command"), 
+            InlineKeyboardButton("📁ᴀᴅᴍɪɴ ᴄᴍᴅs", callback_data="admin_command"), 
+            ],[
+            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
-        ) 
+        ), 
+        disable_web_page_preview=True,
+     ) 
 
 @Client.on_callback_query(filters.regex("help_command"))
 @check_blacklist()
