@@ -6,6 +6,7 @@ from time import time
 
 from config import (
     UPTIME_IMG, 
+    START_IMG_URL, 
     PING_IMG, 
     ALIVE_IMG,
     ALIVE_NAME,
@@ -56,21 +57,18 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
-try:
-    from config import START_IMG_URL
-except:
-    START_IMG_URL = f"https://telegra.ph/file/52771fab9aa447154ecfd.jpg", 
-
-
-loop = asyncio.get_event_loop()
-
-
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 @check_blacklist()
 async def start_(c: Client, message: Message):
-    BOT_NAME = me_bot.first_name
+    user_id = message.from_user.id
+    if await is_served_user(user_id):
+        pass
+    else:
+        await add_served_user(user_id)
+        return
+    await message.reply_photo(START_IMG_URL)
     await message.reply_text(
         f"""💝 **ᴡᴇʟᴄᴏᴍᴇ🎉 {message.from_user.mention()} !**\n
 😁 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ🎶 ᴀɴᴅ ᴠɪᴅᴇᴏ🎥 ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ!**
