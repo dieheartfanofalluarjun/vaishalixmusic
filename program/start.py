@@ -21,7 +21,7 @@ from driver.core import bot, me_bot, me_user
 from driver.filters import command
 from driver.database.dbchat import add_served_chat, is_served_chat
 from driver.database.dbpunish import is_gbanned_user
-from driver.database.dbusers import add_served_user
+from driver.database.dbusers import add_served_user, is_served_user
 from driver.database.dblockchat import blacklisted_chats
 from pytgcalls import idle
 from pyrogram import Client, filters, __version__ as pyrover
