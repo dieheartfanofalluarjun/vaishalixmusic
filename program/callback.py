@@ -1,9 +1,6 @@
 # Copyright (C) 2022 By SanthuMusicProjects
 
-import asyncio
-
 from driver.core import me_bot
-from pytgcalls import idle
 from driver.decorators import check_blacklist
 from driver.queues import QUEUE
 from pyrogram import Client, filters
@@ -17,13 +14,6 @@ from config import (
     SUDO_USERS,
     OWNER_ID,
 )
-try:
-    from config import START_IMG_URL
-except:
-    START_IMG_URL = f"https://telegra.ph/file/52771fab9aa447154ecfd.jpg", 
-
-
-loop = asyncio.get_event_loop()
 
 
 @Client.on_callback_query(filters.regex("home_start"))
