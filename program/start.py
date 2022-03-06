@@ -61,7 +61,6 @@ try:
 except:
     START_IMG_URL = None
 
-
 loop = asyncio.get_event_loop()
 
 @Client.on_message(
