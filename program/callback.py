@@ -23,6 +23,7 @@ except:
 
 loop = asyncio.get_event_loop()
 
+
 @Client.on_callback_query(filters.regex("home_start"))
 @check_blacklist()
 async def start_set(_, query: CallbackQuery):
