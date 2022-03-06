@@ -1,6 +1,5 @@
 import asyncio
 
-from pytgcalls import idle
 from datetime import datetime
 from sys import version_info
 from time import time
@@ -23,6 +22,7 @@ from driver.database.dbchat import add_served_chat, is_served_chat
 from driver.database.dbpunish import is_gbanned_user
 from driver.database.dbusers import add_served_user
 from driver.database.dblockchat import blacklisted_chats
+from pytgcalls import idle
 from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.errors import FloodWait
 from pytgcalls import (__version__ as pytover)
