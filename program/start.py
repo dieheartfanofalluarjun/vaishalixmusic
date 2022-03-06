@@ -1,12 +1,12 @@
 import asyncio
 
+from pytgcalls import idle
 from datetime import datetime
 from sys import version_info
 from time import time
 
 from config import (
     UPTIME_IMG, 
-    START_IMG_URL, 
     PING_IMG, 
     ALIVE_IMG,
     ALIVE_NAME,
@@ -60,6 +60,9 @@ try:
     from config import START_IMG_URL
 except:
     START_IMG_URL = None
+
+
+loop = asyncio.get_event_loop()
 
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
