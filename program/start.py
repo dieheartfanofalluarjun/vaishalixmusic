@@ -62,6 +62,9 @@ except:
     START_IMG_URL = None
 
 
+loop = asyncio.get_event_loop()
+
+
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
