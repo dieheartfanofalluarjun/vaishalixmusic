@@ -1,5 +1,7 @@
 # Copyright (C) 2022 By SanthuMusicProjects
 
+import asyncio
+
 from driver.core import me_bot
 from pytgcalls import idle
 from driver.decorators import check_blacklist
