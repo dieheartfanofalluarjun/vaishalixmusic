@@ -231,14 +231,7 @@ async def ping_pong(c: Client, message: Message):
         ]
     )
 
-    await c.send_photo(
-        chat_id,
-        photo=f"{PING_IMG}",
-        edit_text=ping,
-        reply_markup=keyboard,
-    ) 
-
-
+    
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 @check_blacklist()
 async def get_uptime(c: Client, message: Message):
@@ -253,6 +246,7 @@ async def get_uptime(c: Client, message: Message):
         f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
     )
 
+
     keyboard = InlineKeyboardMarkup(
         [
             [
@@ -264,11 +258,6 @@ async def get_uptime(c: Client, message: Message):
         ]
     )
 
-    await c.send_photo(
-        chat_id,
-        photo=f"{UPTIME_IMG}",
-        reply_text=uptime,
-        reply_markup=keyboard,
 
 @Client.on_chat_join_request()
 async def approve_join_chat(c: Client, m: ChatJoinRequest):
