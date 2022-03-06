@@ -1,14 +1,14 @@
 # Copyright (C) 2022 By SanthuMusicProjects
 
 from driver.core import me_bot
+from pytgcalls import idle
 from driver.decorators import check_blacklist
 from driver.queues import QUEUE
 from pyrogram import Client, filters
 from program.utils.inline import menu_markup, stream_markup
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from config import (
-    BOT_USERNAME,
-    START_IMG_URL, 
+    BOT_USERNAME, 
     GROUP_SUPPORT,
     OWNER_USERNAME,
     UPDATES_CHANNEL,
@@ -19,6 +19,9 @@ try:
     from config import START_IMG_URL
 except:
     START_IMG_URL = None
+
+
+loop = asyncio.get_event_loop()
 
 @Client.on_callback_query(filters.regex("home_start"))
 @check_blacklist()
