@@ -20,7 +20,7 @@ from config import (
 try:
     from config import START_IMG_URL
 except:
-    START_IMG_URL = None
+    START_IMG_URL = f"https://telegra.ph/file/52771fab9aa447154ecfd.jpg", 
 
 
 loop = asyncio.get_event_loop()
