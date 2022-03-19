@@ -36,7 +36,7 @@ async def thumb(thumbnail, title, userid, ctitle):
     draw = ImageDraw.Draw(img) 
     font = ImageFont.truetype("driver/source/finalfont.ttf", 85)
     font2 = ImageFont.truetype("driver/source/finalfont.ttf", 60)
-    arial = ImageFont.truetype("driver/source/finalfont.ttf", 60)
+    arial = ImageFont.truetype("driver/source/font2.ttf", 60)
      draw.text(
             (5, 5), f"{BOT_NAME}", fill="white", font=name_font
         )
