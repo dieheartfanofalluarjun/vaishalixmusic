@@ -37,18 +37,21 @@ async def thumb(thumbnail, title, userid, ctitle):
     font = ImageFont.truetype("driver/source/finalfont.ttf", 85)
     font2 = ImageFont.truetype("driver/source/finalfont.ttf", 60)
     arial = ImageFont.truetype("driver/source/font2.ttf", 60)
-     draw.text(
-            (5, 5), f"{BOT_NAME}", fill="white", font=name_font
-        )
-        draw.text(
-            (600, 150),
-            "NOW PLAYING",
-            fill="white",
-            stroke_width=2,
-            stroke_fill="white",
-            font=font2,
-        )
-        for line in para:
+    draw.text(
+        (5, 5),
+       f"{BOT_NAME}",
+       fill="white", 
+       font=name_font
+    )
+    draw.text(
+        (600, 150),
+        "NOW PLAYING",
+        fill="white",
+        stroke_width=2,
+        stroke_fill="white",
+        font=font2,
+    )
+    for line in para:
             if j == 1:
                 j += 1
                 draw.text(
