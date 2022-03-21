@@ -1,6 +1,7 @@
 import os
 import aiofiles
 import aiohttp
+import textwrap
 from config import BOT_NAME
 from PIL import (
     Image,
@@ -37,21 +38,20 @@ async def thumb(thumbnail, title, userid, ctitle):
     font = ImageFont.truetype("driver/source/finalfont.ttf", 85)
     font2 = ImageFont.truetype("driver/source/finalfont.ttf", 60)
     arial = ImageFont.truetype("driver/source/font2.ttf", 60)
-    draw.text(
-        (5, 5),
-        f"{BOT_NAME}",
-        fill="white", 
-        font=name_font
-    )
-    draw.text(
-        (600, 150),
-        "NOW PLAYING",
-        fill="white",
-        stroke_width=2,
-        stroke_fill="white",
-        font=font2,
-    )
-    for line in para:
+    para = textwrap.wrap(title, width=32)
+        j = 0
+        draw.text(
+            (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+        )
+        draw.text(
+            (600, 150),
+            "NOW PLAYING",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
+        for line in para:
             if j == 1:
                 j += 1
                 draw.text(
@@ -72,24 +72,25 @@ async def thumb(thumbnail, title, userid, ctitle):
                     stroke_fill="white",
                     font=font,
                 )
-   draw.text(
-       (600, 450),
-       f"Views : {views[:23]}",
-       (255, 255, 255),
-       font=arial,
-   )
-   draw.text(
-       (600, 500),
-       f"Duration : {duration[:23]} Mins",
-       (255, 255, 255),
-       font=arial,
-   )
-   draw.text(
-       (600, 550),
-       f"Channel : {channel}",
-       (255, 255, 255),
-       font=arial,
-   )
+
+        draw.text(
+            (600, 450),
+            f"Views : {views[:23]}",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 500),
+            f"Duration : {duration[:23]} Mins",
+            (255, 255, 255),
+            font=arial,
+        )
+        draw.text(
+            (600, 550),
+            f"Channel : {channel}",
+            (255, 255, 255),
+            font=arial,
+        )
     img.save(f"search/final{userid}.png")
     os.remove(f"search/temp{userid}.png")
     os.remove(f"search/thumb{userid}.png")
