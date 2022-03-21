@@ -40,7 +40,6 @@ async def thumb(thumbnail, title, userid, ctitle):
     font2 = ImageFont.truetype("driver/source/finalfont.ttf", 60)
     arial = ImageFont.truetype("driver/source/font2.ttf", 60)
     para = textwrap.wrap(title, width=32)
-        j = 0
         draw.text(
             (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
