@@ -72,7 +72,6 @@ async def thumb(thumbnail, title, userid, ctitle):
                     stroke_fill="white",
                     font=font,
                 )
-
    draw.text(
        (600, 450),
        f"Views : {views[:23]}",
