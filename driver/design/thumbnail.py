@@ -3,6 +3,7 @@ import aiofiles
 import aiohttp
 import textwrap
 from config import BOT_NAME
+from youtubesearchpython.__future__ import VideosSearch
 from PIL import (
     Image,
     ImageDraw,
