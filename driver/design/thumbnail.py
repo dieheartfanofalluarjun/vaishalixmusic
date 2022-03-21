@@ -73,24 +73,24 @@ async def thumb(thumbnail, title, userid, ctitle):
                     font=font,
                 )
 
-        draw.text(
-            (600, 450),
-            f"Views : {views[:23]}",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 500),
-            f"Duration : {duration[:23]} Mins",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 550),
-            f"Channel : {channel}",
-            (255, 255, 255),
-            font=arial,
-        )
+   draw.text(
+       (600, 450),
+       f"Views : {views[:23]}",
+       (255, 255, 255),
+       font=arial,
+   )
+   draw.text(
+       (600, 500),
+       f"Duration : {duration[:23]} Mins",
+       (255, 255, 255),
+       font=arial,
+   )
+   draw.text(
+       (600, 550),
+       f"Channel : {channel}",
+       (255, 255, 255),
+       font=arial,
+   )
     img.save(f"search/final{userid}.png")
     os.remove(f"search/temp{userid}.png")
     os.remove(f"search/thumb{userid}.png")
