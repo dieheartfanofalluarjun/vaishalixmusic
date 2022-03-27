@@ -14,7 +14,7 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio
 # repository stuff
 from driver.decorators import require_admin, check_blacklist
 from program.utils.inline import stream_markup
-from driver.design.thumbnail import thumb
+from driver.design.thumbnail import gen_thumb
 from driver.design.chatname import CHAT_TITLE
 from driver.filters import command, other_filters
 from driver.queues import QUEUE, add_to_queue
