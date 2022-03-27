@@ -3,7 +3,7 @@ import traceback
 from cache.admins import admins
 from driver.core import calls, bot
 from pyrogram import Client, filters
-from driver.design.thumbnail import thumb
+from driver.design.thumbnail import gen_thumb
 from driver.design.chatname import CHAT_TITLE
 from driver.queues import QUEUE, clear_queue
 from driver.filters import command, other_filters
