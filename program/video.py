@@ -215,7 +215,7 @@ async def vplay(c: Client, m: Message):
                     userid = m.from_user.id
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
-                    image = await thumb(thumbnail, title, userid, ctitle, videoid)
+                    image = await thumb(videoid)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
                         await loser.edit(f"🤨 ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
@@ -279,7 +279,7 @@ async def vplay(c: Client, m: Message):
                 userid = m.from_user.id
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
-                image = await thumb(thumbnail, title, userid, ctitle, videoid)
+                image = await thumb(videoid)
                 veez, ytlink = await ytdl(url)
                 if veez == 0:
                     await loser.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
@@ -322,10 +322,10 @@ async def vplay(c: Client, m: Message):
                             await m.reply_text(f"🚫 error: `{ep}`")
 
 
-@Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 @check_blacklist()
 @require_admin(permissions=["can_manage_voice_chats", "can_delete_messages", "can_invite_users"], self=True)
-async def vstream(c: Client, m: Message):
+async def stream(c: Client, m: Message):
     await m.delete()
     chat_id = m.chat.id
     user_id = m.from_user.id
@@ -407,7 +407,7 @@ async def vstream(c: Client, m: Message):
                 )
             loser = await c.send_message(chat_id, "🔄 **sᴛʀᴇᴀᴍ ɪs ᴘʀᴏᴄᴇssɪɴɢ...**")
         else:
-            await m.reply("**/vstream {link} {720/480/360}**")
+            await m.reply("**/stream {link} {720/480/360}**")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
