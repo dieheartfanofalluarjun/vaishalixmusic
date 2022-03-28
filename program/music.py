@@ -107,7 +107,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             ctitle = await CHAT_TITLE(gcname)
             title = songname
             userid = m.from_user.id
-            image = await thumb(thumbnail, title, userid, videoid ctitle)
+            image = await thumb(thumbnail, title, userid, videoid, ctitle)
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
             buttons = stream_markup(user_id)
@@ -234,7 +234,7 @@ async def play(c: Client, m: Message):
                     userid = m.from_user.id
                     gcname = m.chat.title
                     ctitle = await CHAT_TITLE(gcname)
-                    image = await thumb(thumbnail, title, userid, videoid ctitle)
+                    image = await thumb(thumbnail, title, userid, videoid, ctitle)
                     veez, ytlink = await ytdl(url)
                     if veez == 0:
                         await suhu.edit(f"❌ ʏᴛ-ᴅʟ ɪssᴜᴇs ᴅᴇᴛᴇᴄᴛᴇᴅ\n\n» `{ytlink}`")
