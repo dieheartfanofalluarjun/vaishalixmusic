@@ -30,6 +30,7 @@ async def start_set(_, query: CallbackQuery):
 
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """, 
+        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
@@ -43,10 +44,8 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
-        ), 
-        disable_web_page_preview=True,
-     )
-
+        ) 
+     
 @Client.on_callback_query(filters.regex("help_command"))
 @check_blacklist()
 async def help(_, query: CallbackQuery):
@@ -163,6 +162,7 @@ async def commands_set(_, query: CallbackQuery):
 🏹 ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ ᴛᴏ ʀᴇᴀᴅ ᴛʜᴇ ᴍᴏᴅᴜʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ & sᴇᴇ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs !
 
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ (`! / .`) ʜᴀɴᴅʟᴇʀ""",
+        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
@@ -176,10 +176,8 @@ async def commands_set(_, query: CallbackQuery):
             InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
-        ), 
-        disable_web_page_preview=True,
-     ) 
-
+        ) 
+        
 @Client.on_callback_query(filters.regex("user_command"))
 @check_blacklist()
 async def user_set(_, query: CallbackQuery):
