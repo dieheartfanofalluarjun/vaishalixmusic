@@ -161,25 +161,20 @@ async def commands_set(_, query: CallbackQuery):
 🏹 ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ ᴛᴏ ʀᴇᴀᴅ ᴛʜᴇ ᴍᴏᴅᴜʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ & sᴇᴇ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs !
 
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ (`! / .`) ʜᴀɴᴅʟᴇʀ""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🥺ᴀᴅᴍɪɴ ᴄᴍᴅs💔", callback_data="admin_command"),
-                ],[
-                    InlineKeyboardButton("💔ᴜsᴇʀ ᴄᴍᴅs🙄", callback_data="user_command"),
-                ],[
-                    InlineKeyboardButton("🔰sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs🔰", callback_data="sudo_command"),
-                    InlineKeyboardButton("✅ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅs💘", callback_data="owner_command"),
-                ],[
-                    InlineKeyboardButton("◁ ʙᴀᴄᴋ ᴛᴏ ʜᴇʟᴘ", callback_data="home_command")
-                ],[
-                    InlineKeyboardButton("🏠ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ🏠", callback_data="help_start")
-                ]
-                   
-            ]
-        ),
-    )
-
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            ],[
+            InlineKeyboardButton("🏹ᴏᴡɴᴇʀ ᴄᴍᴅs✅", callback_data="owner_command"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            ],[
+            InlineKeyboardButton("🔥ǫᴜɪᴄᴋ ᴜsᴇ🔥", callback_data="quick_use"), 
+            InlineKeyboardButton("🔰ᴜsᴇʀ ɢᴜɪᴅᴇ💗", callback_data="user_guide"), 
+            ],[
+            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            ]]
+            ) 
+        )
 
 @Client.on_callback_query(filters.regex("user_command"))
 @check_blacklist()
@@ -204,7 +199,7 @@ async def user_set(_, query: CallbackQuery):
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="command_list")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -230,7 +225,7 @@ async def admin_set(_, query: CallbackQuery):
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="command_list")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -259,7 +254,7 @@ async def sudo_set(_, query: CallbackQuery):
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="command_list")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -287,7 +282,7 @@ async def owner_set(_, query: CallbackQuery):
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="command_list")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -341,4 +336,4 @@ async def in_close_panel(_, query: CallbackQuery):
 async def repo(_, query: CallbackQuery):
     user_id = query.from_user.id
     BOT_NAME = me_bot.first_name
-    await query.answer("🥺 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
+    await query.answer("🏹 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
