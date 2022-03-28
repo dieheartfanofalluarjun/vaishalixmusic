@@ -75,7 +75,6 @@ async def start_(c: Client, message: Message):
 
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """,
-        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
