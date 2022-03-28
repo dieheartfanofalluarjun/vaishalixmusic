@@ -75,7 +75,7 @@ async def help(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton(
-                                       "💖sᴀɴᴛʜᴜ ᴄʜᴀɴɴᴇʟ💖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                                       "💖ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ💖", callback_data="command_list"
                 )
             ],
             [
