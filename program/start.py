@@ -121,7 +121,7 @@ async def help(c: Client, message: Message):
             ],
             [
                 InlineKeyboardButton(
-                                       "💖sᴀɴᴛʜᴜ ᴄʜᴀɴɴᴇʟ💖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                                       "💖ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ💖", callback_data="command_list"
                 )
             ],
             [
@@ -168,7 +168,7 @@ async def ghelp(c: Client, message: Message):
             ],
             [
                 InlineKeyboardButton(
-                                       "💖sᴀɴᴛʜᴜ ᴄʜᴀɴɴᴇʟ💖", url=f"https://t.me/{UPDATES_CHANNEL}"
+                                       "💖ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ💖", callback_data="command_list"
                 )
             ],
             [
