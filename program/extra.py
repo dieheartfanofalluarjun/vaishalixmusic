@@ -146,7 +146,7 @@ async def bot_statistic(c: Client, message: Message):
 ➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{pyver}`
 ➛ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ** : `{pytgver.__version__}`
 ➛ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyrover}`
-💘 ʙᴏᴛ ᴠᴇʀsɪᴏɴ: `{ver}`"""
+➛ ** ʙᴏᴛ ᴠᴇʀsɪᴏɴ: `{ver}`"""
     
     await msg.edit(tgm, disable_web_page_preview=True)
 
