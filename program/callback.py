@@ -30,7 +30,6 @@ async def start_set(_, query: CallbackQuery):
 
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """, 
-        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
@@ -162,7 +161,6 @@ async def commands_set(_, query: CallbackQuery):
 🏹 ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ ᴛᴏ ʀᴇᴀᴅ ᴛʜᴇ ᴍᴏᴅᴜʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ & sᴇᴇ ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs !
 
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ (`! / .`) ʜᴀɴᴅʟᴇʀ""",
-        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
