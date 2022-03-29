@@ -38,4 +38,16 @@ IMG_5 = getenv("IMG_5", "https://telegra.ph/file/63300139d232dc12452ab.png")
 ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/19814cb8155e0a06a1da9.jpg")
 PING_IMG = getenv("PING_IMG", "https://te.legra.ph/file/9f9a3b5b0822fa621d4c1.jpg")
 YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "assets/Youtube.jpeg") 
-START_IMG_URL = getenv("START_IMG_URL", None) 
+
+## BOT IMG
+
+START_IMG_URL = [
+ "https://te.legra.ph/file/28f95b221efbefede9988.jpg", 
+ "https://telegra.ph/file/290e055a47df326b6e908.jpg", 
+ "https://telegra.ph/file/4a2c348dc10f4799ecc23.jpg", 
+ "https://telegra.ph/file/e5d14734cc62fb45ebb80.jpg", 
+ "https://telegra.ph/file/52771fab9aa447154ecfd.jpg", 
+ "https://telegra.ph/file/28af6e4d2f6c9849ccd8e.jpg", 
+ "https://telegra.ph/file/de94973a185e70e207363.jpg", 
+ "https://telegra.ph/file/c2ff65c5f7ddbb6a52170.jpg"
+]
