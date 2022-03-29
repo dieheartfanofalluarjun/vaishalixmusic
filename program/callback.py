@@ -337,33 +337,3 @@ async def repo(_, query: CallbackQuery):
     user_id = query.from_user.id
     BOT_NAME = me_bot.first_name
     await query.answer("🏹 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
-
-
-@Client.on_callback_query(filters.regex("skip"))
-@check_blacklist()
-async def skip(_, query: CallbackQuery):
-    user_id = message.from_user.id
-    chat_id = message.chat.id
-    queue = await skip_current_song(chat_id)
-    if queue == 0:
-        await message.reply_text("❌ nothing is currently playing")
-    elif queue == 1:
-        await message.reply_text("» There's no more music in queue to skip, userbot leaving video chat.")
-    elif queue == 2:
-        await message.reply_text("🗑️ Clearing the **queues**\n\n» **userbot** leaving video chat.")
-    else:
-        buttons = stream_markup(user_id)
-        requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
-        thumbnail = f"{IMG_5}"
-        title = f"{queue[0]}"
-        userid = message.from_user.id
-        gcname = message.chat.title
-        ctitle = await CHAT_TITLE(gcname)
-        image = await thumb(thumbnail, title, userid, videoid, ctitle)
-        await c.send_photo(
-            chat_id,
-            photo=image,
-            reply_markup=InlineKeyboardMarkup(buttons),
-            caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Name:** [{queue[0]}]({queue[1]})\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
-        )
-        remove_if_exists(image)
