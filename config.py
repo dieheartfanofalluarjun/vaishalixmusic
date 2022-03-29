@@ -40,7 +40,6 @@ PING_IMG = getenv("PING_IMG", "https://te.legra.ph/file/9f9a3b5b0822fa621d4c1.jp
 YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "assets/Youtube.jpeg") 
 
 ## BOT IMG
-
 START_IMG_URL = [
  "https://te.legra.ph/file/28f95b221efbefede9988.jpg", 
  "https://telegra.ph/file/290e055a47df326b6e908.jpg", 
