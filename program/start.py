@@ -62,11 +62,7 @@ async def _human_time_duration(seconds):
 @check_blacklist()
 async def start_(c: Client, message: Message):
     user_id = message.from_user.id
-    if await is_served_user(user_id):
-        pass
-    else:
-        await add_served_user(user_id)
-        return
+    await add_served_user(user_id)
     await message.reply_photo(
         photo=random.choice(START_IMG_URL), 
         caption= f"""💝 **ᴡᴇʟᴄᴏᴍᴇ🎉 {message.from_user.mention()} !**\n
