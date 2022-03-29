@@ -5,7 +5,7 @@ from driver.decorators import check_blacklist
 from driver.queues import QUEUE
 from pyrogram import Client, filters
 from program.utils.inline import menu_markup, stream_markup
-from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import (
     BOT_USERNAME,
     START_IMG_URL, 
@@ -342,24 +342,24 @@ async def repo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("skip"))
 @check_blacklist()
 async def skip(_, query: CallbackQuery):
-    user_id = m.from_user.id
-    chat_id = m.chat.id
+    user_id = message.from_user.id
+    chat_id = message.chat.id
     queue = await skip_current_song(chat_id)
     if queue == 0:
-        await m.reply_text("❌ nothing is currently playing")
+        await message.reply_text("❌ nothing is currently playing")
     elif queue == 1:
-        await m.reply_text("» There's no more music in queue to skip, userbot leaving video chat.")
+        await message.reply_text("» There's no more music in queue to skip, userbot leaving video chat.")
     elif queue == 2:
-        await m.reply_text("🗑️ Clearing the **queues**\n\n» **userbot** leaving video chat.")
+        await message.reply_text("🗑️ Clearing the **queues**\n\n» **userbot** leaving video chat.")
     else:
         buttons = stream_markup(user_id)
         requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
         thumbnail = f"{IMG_5}"
         title = f"{queue[0]}"
-        userid = m.from_user.id
-        gcname = m.chat.title
+        userid = message.from_user.id
+        gcname = message.chat.title
         ctitle = await CHAT_TITLE(gcname)
-        image = await thumb(thumbnail, title, userid, ctitle)
+        image = await thumb(thumbnail, title, userid, videoid, ctitle)
         await c.send_photo(
             chat_id,
             photo=image,
