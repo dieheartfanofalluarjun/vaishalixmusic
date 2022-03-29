@@ -27,6 +27,7 @@ from pyrogram import Client, filters, __version__ as pyrover
 from pyrogram.errors import FloodWait
 from pytgcalls import (__version__ as pytover)
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ChatJoinRequest
+from pyrogram.errors import UserNotParticipant
 
 __major__ = 0
 __minor__ = 2
@@ -56,11 +57,28 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
+force_channel = "santhubotupadates"
+
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 @check_blacklist()
 async def start_(c: Client, message: Message):
+    if force_channel:
+        try:
+            user = await bot.get_chat_member(force_channel, message.from_user.id) 
+            if user.status == "kicked out":
+                await message.reply_text("You are banned") 
+                return
+        except UserNotParticipant:
+            await message.reply_text(
+                text="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
+                reply_markup=InlineKeyboardMarkup( [[
+                 InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔥", url=f"t.me/{force_channel}") 
+                 ]]
+                ) 
+            )
+            return
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_photo(
