@@ -55,41 +55,14 @@ async def help(_, query: CallbackQuery):
 💘 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ sᴇᴛᴜᴘ ᴛʜɪs ʙᴏᴛ? ʀᴇᴀᴅ 💖 sᴇᴛᴛɪɴɢ ᴜᴘ ᴛʜɪs ʙᴏᴛ ɪɴ ɢʀᴏᴜᴘ **\n
 💗 **ᴛᴏ ᴋɴᴏᴡ ᴘʟᴀʏ ᴠɪᴅᴇᴏ/ᴀᴜᴅɪᴏ/ʟɪᴠᴇ? ʀᴇᴀᴅ 💖 ǫᴜɪᴄᴋ ᴜsᴇ ᴄᴏᴍᴍᴀɴᴅs **\n
 💝 **ᴛᴏ ᴋɴᴏᴡ ᴇᴠᴇʀʏ sɪɴɢʟᴇ ᴄᴏᴍᴍᴀɴᴅ ᴏғ ʙᴏᴛ? ʀᴇᴀᴅ 💖 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs**\n """,
-        reply_markup=InlineKeyboardMarkup(
-        
-        [
-            [
-                InlineKeyboardButton(
-                                       "😟ᴘʟᴇᴀsᴇ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ💘", url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-                )
-            ],
-            [
-                InlineKeyboardButton( 
-                                       "💝sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs💖", callback_data="sudo_command"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                                       "💚ᴀᴅᴍɪɴ ᴄᴍᴅs💚", callback_data="admin_commands"
-                )
-            ],
-            [
-                InlineKeyboardButton(
-                                       "💖ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ💖", callback_data="command_list"
-                )
-            ],
-            [
-                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "◁", callback_data="home_start"
-                   ),
-               ]
-            
-            ]      
-     ),
-        disable_web_page_preview=True,
-        )
-
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("ᴀᴅᴍɪɴs ᴄᴍᴅs", callback_data="admin_command"), 
+            InlineKeyboardButton("sᴜᴅᴏ ᴄᴍᴅs", callback_data="sudo_command"), 
+            ],[
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
+            ]]
+            ) 
+        )  
 
 @Client.on_callback_query(filters.regex("quick_use"))
 @check_blacklist()
@@ -107,8 +80,8 @@ async def quick_set(_, query: CallbackQuery):
 🤨 sᴛɪʟʟ ʜᴀᴠᴇ ǫᴜᴇsᴛɪᴏɴs? ᴄᴏɴᴛᴀᴄᴛ ᴜs ɪɴ [sᴀɴᴛʜᴜ ᴠᴄ](https://t.me/{GROUP_SUPPORT}).""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴇʟᴘ", callback_data="help_command")],
-                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ sᴇᴛ ᴜᴘ", callback_data="user_guide")]    
+                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴇʟᴘ", callback_data="command_list")],
+                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ sᴇᴛ ᴜᴘ", callback_data="home_start")]    
             ]
         ),
         disable_web_page_preview=True,
