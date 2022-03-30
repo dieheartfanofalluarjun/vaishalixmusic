@@ -72,7 +72,7 @@ async def start_(c: Client, message: Message):
                 return
         except UserNotParticipant:
             await message.reply_photo(
-                photo=random.choice(START_IMG),
+                photo=random.choice(START_IMG_URL),
                 caption="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
                 reply_markup=InlineKeyboardMarkup( [[
                  InlineKeyboardButton("🔰ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔰", url=f"t.me/{force_channel}") 
