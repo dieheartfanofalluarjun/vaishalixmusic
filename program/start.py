@@ -6,6 +6,8 @@ from time import time
 import random
 
 from config import (
+    PING_IMG, 
+    UPTIME_IMG, 
     START_IMG_URL, 
     ALIVE_IMG,
     ALIVE_NAME,
@@ -240,9 +242,9 @@ async def ping_pong(c: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
     delta_ping = time() - start
-    await m_reply.edit_photo(
+    await message.reply_photo(
         photo=(PING_IMG), 
-        caption="💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
 
     reply_markup=InlineKeyboardMarkup(
         [
