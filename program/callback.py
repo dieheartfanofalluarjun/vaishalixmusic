@@ -144,7 +144,7 @@ async def commands_set(_, query: CallbackQuery):
             InlineKeyboardButton("🔥ǫᴜɪᴄᴋ ᴜsᴇ🔥", callback_data="quick_use"), 
             InlineKeyboardButton("🔰ᴜsᴇʀ ɢᴜɪᴅᴇ💗", callback_data="user_guide"), 
             ],[
-            InlineKeyboardButton("◁", callback_data="command_list")
+            InlineKeyboardButton("◁", callback_data="help_command")
             ]]
             ) 
         ) 
