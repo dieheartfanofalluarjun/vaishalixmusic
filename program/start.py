@@ -71,10 +71,11 @@ async def start_(c: Client, message: Message):
                 await message.reply_text("You are banned") 
                 return
         except UserNotParticipant:
-            await message.reply_text(
-                text="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
+            await message.reply_photo(
+                photo=random.choice(START_IMG),
+                caption="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
                 reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔥", url=f"t.me/{force_channel}") 
+                 InlineKeyboardButton("🔰ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔰", url=f"t.me/{force_channel}") 
                  ]]
                 ) 
             )
