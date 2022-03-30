@@ -143,8 +143,8 @@ async def commands_set(_, query: CallbackQuery):
             ],[
             InlineKeyboardButton("🔥ǫᴜɪᴄᴋ ᴜsᴇ🔥", callback_data="quick_use"), 
             InlineKeyboardButton("🔰ᴜsᴇʀ ɢᴜɪᴅᴇ💗", callback_data="user_guide"), 
-            ],[
-            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            ],
+            InlineKeyboardButton("◁", callback_data="command_list")
             ]]
             ) 
         ) 
