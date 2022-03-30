@@ -60,6 +60,8 @@ async def help(_, query: CallbackQuery):
             InlineKeyboardButton("sᴜᴅᴏ ᴄᴍᴅs", callback_data="sudo_command"), 
             ],[
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
+            ],[
+            InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ]]
             ) 
         )  
@@ -170,7 +172,7 @@ async def user_set(_, query: CallbackQuery):
 » /alive - sʜᴏᴡ ᴛʜᴇ ʙᴏᴛ ᴀʟɪᴠᴇ ɪɴғᴏ (ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ)
 » /help - ᴛᴏ sʜᴏᴡ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ (ғᴜʟʟ ʙᴏᴛ ɢᴜɪᴅᴇ)
 
-⚡️ __Powered by {BOT_NAME} AI__""",
+⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
@@ -196,9 +198,9 @@ async def admin_set(_, query: CallbackQuery):
 » /userbotjoin - ɪɴᴠɪᴛᴇ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ᴛᴏ ᴊᴏɪɴ ɢʀᴏᴜᴘ
 » /userbotleave - ᴏʀᴅᴇʀ ᴜsᴇʀʙᴏᴛ ᴛᴏ ʟᴇᴀᴠᴇ ғʀᴏᴍ ɢʀᴏᴜᴘ
 
-⚡️ __Powered by {BOT_NAME} AI__""",
+⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="help_command")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -225,9 +227,9 @@ async def sudo_set(_, query: CallbackQuery):
 » /eval - ᴇxᴇᴄᴜᴛᴇ ᴀɴʏ ᴄᴏᴅᴇ (`ᴅᴇᴠᴇʟᴏᴘᴇʀ sᴛᴜғғ`)
 » /sh - ʀᴜɴ ᴀɴʏ ᴄᴏᴍᴍᴀɴᴅ (`ᴅᴇᴠᴇʟᴏᴘᴇʀ sᴛᴜғғ`)
 
-⚡ __Powered by {BOT_NAME} AI__""",
+🔥 __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="help_command")]]
+            [[InlineKeyboardButton("◁", callback_data="home_start")]]
         ),
     )
 
@@ -253,9 +255,9 @@ async def owner_set(_, query: CallbackQuery):
 » /broadcast (`ᴍᴇssᴀɢᴇ`) - sᴇɴᴅ ᴀ ʙʀᴏᴀᴅᴄᴀsᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ɢʀᴏᴜᴘs ɪɴ ʙᴏᴛ ᴅᴀᴛᴀʙᴀsᴇ
 » /broadcast_pin (`ᴍᴇssᴀɢᴇ`) - sᴇɴᴅ ᴀ ʙʀᴏᴀᴅᴄᴀsᴛ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀʟʟ ɢʀᴏᴜᴘs ɪɴ ʙᴏᴛ ᴅᴀᴛᴀʙᴀsᴇ ᴡɪᴛʜ ᴛʜᴇ ᴄʜᴀᴛ ᴘɪɴ
 
-⚡ __Powered by {BOT_NAME} AI__""",
+🔥 __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="help_command")]]
+            [[InlineKeyboardButton("◁", callback_data="command_list")]]
         ),
     )
 
