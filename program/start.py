@@ -245,6 +245,7 @@ async def ping_pong(c: Client, message: Message):
     await message.reply_photo(
         photo=(PING_IMG), 
     await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
+    ) 
 
     reply_markup=InlineKeyboardMarkup(
         [
