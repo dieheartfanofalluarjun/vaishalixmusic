@@ -80,7 +80,7 @@ async def quick_set(_, query: CallbackQuery):
 🤨 sᴛɪʟʟ ʜᴀᴠᴇ ǫᴜᴇsᴛɪᴏɴs? ᴄᴏɴᴛᴀᴄᴛ ᴜs ɪɴ [sᴀɴᴛʜᴜ ᴠᴄ](https://t.me/{GROUP_SUPPORT}).""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴇʟᴘ", callback_data="command_list")],
+                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴇʟᴘ", callback_data="help_command")],
                 [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ sᴇᴛ ᴜᴘ", callback_data="home_start")]    
             ]
         ),
@@ -113,9 +113,9 @@ async def guide_set(_, query: CallbackQuery):
                 [
                     InlineKeyboardButton("🤿ᴜsᴇ ᴛʜɪs ɢᴜɪᴅᴇ🥱", callback_data="quick_use")
                 ],[
-                    InlineKeyboardButton("◁ ʙᴀᴄᴋ ᴛᴏ ʜᴇʟᴘ", callback_data="home_command")
+                    InlineKeyboardButton("◁ ʙᴀᴄᴋ ᴛᴏ ʜᴇʟᴘ", callback_data="help_command")
                 ],[
-                    InlineKeyboardButton("🏠ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ🏠", callback_data="help_start")
+                    InlineKeyboardButton("🏠ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ🏠", callback_data="home_start")
                 ]
             ]   
       ),
@@ -198,7 +198,7 @@ async def admin_set(_, query: CallbackQuery):
 
 ⚡️ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="home_start")]]
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
     )
 
@@ -227,7 +227,7 @@ async def sudo_set(_, query: CallbackQuery):
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="home_start")]]
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
     )
 
@@ -255,7 +255,7 @@ async def owner_set(_, query: CallbackQuery):
 
 ⚡ __Powered by {BOT_NAME} AI__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="home_start")]]
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
     )
 
