@@ -174,7 +174,7 @@ async def user_set(_, query: CallbackQuery):
 
 ⚡️ __ᴘᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME} ᴀɪ__""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("◁", callback_data="home_start")]]
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
         ),
     )
 
