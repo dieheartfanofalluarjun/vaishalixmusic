@@ -49,5 +49,9 @@ START_IMG_URL = [
  "https://telegra.ph/file/52771fab9aa447154ecfd.jpg", 
  "https://telegra.ph/file/28af6e4d2f6c9849ccd8e.jpg", 
  "https://telegra.ph/file/de94973a185e70e207363.jpg", 
- "https://telegra.ph/file/c2ff65c5f7ddbb6a52170.jpg"
+ "https://telegra.ph/file/c2ff65c5f7ddbb6a52170.jpg", 
+ "https://te.legra.ph/file/449a5c8301dc0f48f842e.jpg", 
+ "https://te.legra.ph/file/39e707ee27325867e27b1.jpg", 
+ "https://te.legra.ph/file/90812b7fa0538389943ab.jpg", 
+ "https://te.legra.ph/file/914fc426bed31dbe4bdc2.jpg", 
 ]
