@@ -59,9 +59,9 @@ async def help(_, query: CallbackQuery):
             InlineKeyboardButton("ᴀᴅᴍɪɴs ᴄᴍᴅs", callback_data="admin_command"), 
             InlineKeyboardButton("sᴜᴅᴏ ᴄᴍᴅs", callback_data="sudo_command"), 
             ],[
-            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
-            ],[
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
+            ],[
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
             ]]
             ) 
         )  
