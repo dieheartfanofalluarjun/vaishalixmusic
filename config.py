@@ -37,6 +37,7 @@ IMG_4 = getenv("IMG_4", "https://te.legra.ph/file/35700a88d56fd6064822a.png")
 IMG_5 = getenv("IMG_5", "https://telegra.ph/file/63300139d232dc12452ab.png")
 ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/19814cb8155e0a06a1da9.jpg")
 PING_IMG = getenv("PING_IMG", "https://te.legra.ph/file/9f9a3b5b0822fa621d4c1.jpg")
+UPTIME_IMG = getenv("UPTIME_IMG", "https://te.legra.ph/file/1864dfe3c8a58ca2feac3.jpg")
 YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "assets/Youtube.jpeg") 
 
 ## BOT IMG
