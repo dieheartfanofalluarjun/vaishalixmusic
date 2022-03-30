@@ -240,9 +240,11 @@ async def ping_pong(c: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
     delta_ping = time() - start
-    await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_photo(
+        photo=(PING_IMG), 
+        caption="💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
 
-    keyboard = InlineKeyboardMarkup(
+    reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton("💖ɴᴇᴛᴡᴏʀᴋ💖", url=f"https://t.me/{GROUP_SUPPORT}"),
@@ -260,15 +262,14 @@ async def get_uptime(c: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    await message.reply_text(
-        "😊 sᴀɴᴛʜᴜ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
-        f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
-        f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
-        f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
-        f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
-    )
-
-
+    await message.reply_photo(
+        photo=(UPTIME_IMG), 
+        caption="😊 sᴀɴᴛʜᴜ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
+                f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
+                f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
+                f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
+                f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
+             )
     keyboard = InlineKeyboardMarkup(
         [
             [
