@@ -272,7 +272,9 @@ async def get_uptime(c: Client, message: Message):
                 f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
                 f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
                 f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
-             )
+             ) 
+          ) 
+
     keyboard = InlineKeyboardMarkup(
         [
             [
