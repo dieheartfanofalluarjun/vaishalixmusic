@@ -123,7 +123,10 @@ async def help(c: Client, message: Message):
             InlineKeyboardButton("ᴀᴅᴍɪɴs ᴄᴍᴅs", callback_data="admin_command"), 
             InlineKeyboardButton("sᴜᴅᴏ ᴄᴍᴅs", callback_data="sudo_command"), 
             ],[
-            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
+            InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
+            ],[
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/santhuvc")
             ]]
             ) 
         )  
