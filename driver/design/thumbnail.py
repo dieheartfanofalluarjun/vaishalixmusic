@@ -20,11 +20,11 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def thumb(thumbnail, title, userid, videoid, ctitle):
-    if os.path.isfile(f"cache/{videoid}.png"):
-        return f"cache/{videoid}.png"
+async def thumb(thumbnail, title, userid, ctitle):
+    if os.path.isfile(f"cache/{userid}.png"):
+        return f"cache/{userid}.png"
 
-    url = f"https://www.youtube.com/watch?v={videoid}"
+    url = f"https://www.youtube.com/watch?v={userid}"
     try:
         results = VideosSearch(url, limit=1)
         for result in (await results.next())["result"]:
@@ -52,12 +52,12 @@ async def thumb(thumbnail, title, userid, videoid, ctitle):
             async with session.get(thumbnail) as resp:
                 if resp.status == 200:
                     f = await aiofiles.open(
-                        f"cache/thumb{videoid}.png", mode="wb"
+                        f"cache/thumb{userid}.png", mode="wb"
                     )
                     await f.write(await resp.read())
                     await f.close()
 
-        youtube = Image.open(f"cache/thumb{videoid}.png")
+        youtube = Image.open(f"cache/thumb{userid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -81,7 +81,7 @@ async def thumb(thumbnail, title, userid, videoid, ctitle):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
+            (5, 5), f"{BOT_NAME}", fill="white", font=name_font
         )
         draw.text(
             (600, 150),
@@ -132,10 +132,10 @@ async def thumb(thumbnail, title, userid, videoid, ctitle):
             font=arial,
         )
         try:
-            os.remove(f"cache/thumb{videoid}.png")
+            os.remove(f"cache/thumb{userid}.png")
         except:
             pass
-        background.save(f"cache/{videoid}.png")
-        return f"cache/{videoid}.png"
+        background.save(f"cache/{userid}.png")
+        return f"cache/{userid}.png"
     except Exception:
         return YOUTUBE_IMG_URL
