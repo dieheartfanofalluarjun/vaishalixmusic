@@ -133,20 +133,20 @@ async def bot_statistic(c: Client, message: Message):
     chat_id = message.chat.id
     user_id = message.from_user.id
     msg = await c.send_message(
-        chat_id, "❖ Collecting Stats..."
+        chat_id, "❖ ᴄᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs..."
     )
     served_chats = len(await get_served_chats())
     served_users = len(await get_served_users())
     gbans_usertl = await get_gbans_count()
     tgm = f"""
-💝 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛɪsᴛɪᴄs ᴏғ sᴀɴᴛʜᴜ ʙᴏᴛ[{name}](https://t.me/{uname})`:`
+💝 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛɪsᴛɪᴄs ᴏғ sᴀɴᴛʜᴜ ʙᴏᴛ [{name}](https://t.me/{uname})`:`
 ➥ **ɢʀᴏᴜᴘs ᴄʜᴀᴛ** : `{served_chats}`
 ➥ **ᴜsᴇʀs ᴅɪᴀʟᴏɢ** : `{served_users}`
 ➥ **ɢʙᴀɴɴᴇᴅ ᴜsᴇʀs** : `{gbans_usertl}`
 ➛ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ** : `{pyver}`
 ➛ **ᴘʏᴛɢᴄᴀʟʟs ᴠᴇʀsɪᴏɴ** : `{pytgver.__version__}`
 ➛ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** : `{pyrover}`
-➛ ** ʙᴏᴛ ᴠᴇʀsɪᴏɴ: `{ver}`"""
+➛ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ: `{ver}`"""
     
     await msg.edit(tgm, disable_web_page_preview=True)
 
@@ -161,7 +161,7 @@ async def active_calls(c: Client, message: Message):
             served_chats.append(int(chat["chat_id"]))
     except Exception as e:
         traceback.print_exc()
-        await message.reply_text(f"🚫 error: `{e}`")
+        await message.reply_text(f"🚫 ᴇʀʀᴏʀ: `{e}`")
     text = ""
     j = 0
     for x in served_chats:
@@ -178,7 +178,7 @@ async def active_calls(c: Client, message: Message):
             text += f"**{j + 1}.** {title} [`{x}`]\n"
         j += 1
     if not text:
-        await message.reply_text("❌ no active group calls")
+        await message.reply_text("❌ ɴᴏ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟs")
     else:
         await message.reply_text(
             f"✏️ **ʀᴜɴɴɪɴɢ ɢʀᴏᴜᴘ ᴄᴀʟʟ ʟɪsᴛ:**\n\n{text}\n\n❖ ᴛʜɪs ɪs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀʟʟ ᴄᴜʀʀᴇɴᴛ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ.",
