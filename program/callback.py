@@ -61,7 +61,7 @@ async def help(_, query: CallbackQuery):
             ],[
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ],[
-            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list")
+            InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
             InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/santhuvc")
             ]]
             ) 
