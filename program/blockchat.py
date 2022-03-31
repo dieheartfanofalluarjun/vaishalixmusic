@@ -25,9 +25,9 @@ async def blacklist_chat_func(_, message: Message):
     blacklisted = await blacklist_chat(chat_id)
     if blacklisted:
         return await message.reply_text(
-            "✅ This chat has blacklisted!"
+            "✅ ᴛʜɪs ᴄʜᴀᴛ ʜᴀs ʙʟᴀᴄᴋʟɪsᴛᴇᴅ!"
         )
-    await message.reply_text("❗️ something wrong happened, check logs!")
+    await message.reply_text("❗️ sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ, ᴄʜᴇᴄᴋ ʟᴏɢs!")
 
 
 @Client.on_message(command(["unblock", f"unblock@{BOT_USERNAME}", "whitelist"]) & ~filters.edited)
@@ -43,15 +43,15 @@ async def whitelist_chat_func(_, message: Message):
     whitelisted = await whitelist_chat(chat_id)
     if whitelisted:
         return await message.reply_text(
-            "✅ This chat has whitelisted!"
+            "✅ ᴛʜɪs ᴄʜᴀᴛ ʜᴀs ᴡʜɪᴛᴇʟɪsᴛᴇᴅ!"
         )
-    await message.reply_text("❗️ something wrong happened, check logs!")
+    await message.reply_text("❗️ sᴏᴍᴇᴛʜɪɴɢ ᴡʀᴏɴɢ ʜᴀᴘᴘᴇɴᴇᴅ, ᴄʜᴇᴄᴋ ʟᴏɢs!")
 
 
 @Client.on_message(command(["blocklist", f"blocklist@{BOT_USERNAME}", "blacklisted"]) & ~filters.edited)
 @sudo_users_only
 async def blacklisted_chats_func(_, message: Message):
-    text = "📵 » Blocked Chat list:\n\n"
+    text = "📵 » ʙʟᴏᴄᴋᴇᴅ ᴄʜᴀᴛ ʟɪsᴛ:\n\n"
     j = 0
     for count, chat_id in enumerate(await blacklisted_chats(), 1):
         try:
@@ -61,6 +61,6 @@ async def blacklisted_chats_func(_, message: Message):
         j = 1
         text += f"**{count}. {title}** [`{chat_id}`]\n"
     if j == 0:
-        await message.reply_text("❌ no blacklisted chat.")
+        await message.reply_text("❌ ɴᴏ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴄʜᴀᴛ.")
     else:
         await message.reply_text(text)
