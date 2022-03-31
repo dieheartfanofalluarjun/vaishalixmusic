@@ -83,8 +83,7 @@ async def quick_set(_, query: CallbackQuery):
 🤨 sᴛɪʟʟ ʜᴀᴠᴇ ǫᴜᴇsᴛɪᴏɴs? ᴄᴏɴᴛᴀᴄᴛ ᴜs ɪɴ [sᴀɴᴛʜᴜ ᴠᴄ](https://t.me/{GROUP_SUPPORT}).""",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴇʟᴘ", callback_data="help_command")],
-                [InlineKeyboardButton("◁ ʀᴇᴛᴜʀɴ ᴛᴏ sᴇᴛ ᴜᴘ", callback_data="home_start")]    
+                [InlineKeyboardButton("◁", callback_data="command_list")]    
             ]
         ),
         disable_web_page_preview=True,
@@ -114,11 +113,7 @@ async def guide_set(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🤿ᴜsᴇ ᴛʜɪs ɢᴜɪᴅᴇ🥱", callback_data="quick_use")
-                ],[
-                    InlineKeyboardButton("◁ ʙᴀᴄᴋ ᴛᴏ ʜᴇʟᴘ", callback_data="help_command")
-                ],[
-                    InlineKeyboardButton("🏠ʀᴇᴛᴜʀɴ ᴛᴏ ʜᴏᴍᴇ🏠", callback_data="home_start")
+                    InlineKeyboardButton("◁", callback_data="command_list")
                 ]
             ]   
       ),
