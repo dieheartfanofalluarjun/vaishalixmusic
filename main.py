@@ -9,7 +9,7 @@ async def start_bot():
     await calls.start()
     print("[INFO]: PY-TGCALLS CLIENT STARTED !!")
     await user.join_chat("santhubotupadates")
-    await user.join_chat("santhuvc")
+    await user.join_chat("musicupdates12")
     await idle()
     print("[INFO]: STOPPING BOT & USERBOT")
     await bot.stop()
