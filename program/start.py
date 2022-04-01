@@ -93,8 +93,8 @@ async def start_(c: Client, message: Message):
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """,
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url=f"https://t.me/{GROUP_SUPPORT}"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/musicupdates12"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
             ],[
             InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
             InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
@@ -125,7 +125,7 @@ async def help(c: Client, message: Message):
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ],[
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
-            InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}")
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/musicupdates12")
             ]]
             ) 
         )  
@@ -166,7 +166,7 @@ async def ghelp(c: Client, message: Message):
                 )
             ],
             [
-                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url="https://t.me/musicupdates12"),
                 InlineKeyboardButton(
                     "◁", callback_data="home_start"
                 ),
@@ -196,7 +196,7 @@ async def alive(c: Client, message: Message):
             [
                 InlineKeyboardButton("💖ɴᴇᴛᴡᴏʀᴋ💖", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "💚ᴄʜᴀɴɴᴇʟ💚", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "💚ᴄʜᴀɴɴᴇʟ💚", url="https://t.me/musicupdates12"
                 ),
             ]
         ]
