@@ -20,7 +20,7 @@ ASSISTANT_USERNAME = getenv("ASSISTANT_USERNAME")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/santhosh-podili/santhoshpodili")
 UPSTREAM_BRANCH = getenv("UPSTREM_BRANCH", "main")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "santhuvc")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "musicupdates12")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "santhubotupadates")
 
 # database, decorators, handlers mandatory vars
