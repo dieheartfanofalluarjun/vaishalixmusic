@@ -70,7 +70,7 @@
         "UPTIME_IMG": {
             "description": "it's not mandatory",
             "required": false
-            "value": https://te.legra.ph/file/1864dfe3c8a58ca2feac3.jpg
+            "value": "https://te.legra.ph/file/1864dfe3c8a58ca2feac3.jpg", 
         },
         "ALIVE_NAME": {
             "description": "fill with your telegram account nickname/name",
