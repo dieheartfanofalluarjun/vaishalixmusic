@@ -226,7 +226,6 @@ async def get_uptime(c: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    await query.answer("⚠️ ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴄʟɪᴄᴋ ᴛʜɪs ʙᴜᴛᴛᴏɴ\n\n» ᴛʜɪs ʙᴜᴛᴛᴏɴ ɪs ʀᴇsᴇʀᴠᴇᴅ ғᴏʀ ᴏᴡɴᴇʀ ᴏғ ᴛʜɪs ʙᴏᴛ.", show_alert=True) 
     await message.reply_photo(
         photo=(UPTIME_IMG), 
         caption="😊 sᴀɴᴛʜᴜ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
