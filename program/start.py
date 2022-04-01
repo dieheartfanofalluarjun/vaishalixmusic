@@ -6,7 +6,8 @@ from time import time
 import random
 
 from config import (
-    UPTIME_IMG, 
+    UPTIME_IMG,
+    OWNER_ID, 
     START_IMG_URL, 
     ALIVE_IMG,
     ALIVE_NAME,
