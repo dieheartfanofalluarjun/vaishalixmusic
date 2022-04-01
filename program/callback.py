@@ -32,7 +32,7 @@ async def start_set(_, query: CallbackQuery):
 """, 
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/{GROUP_SUPPORT}"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/{UPDATES_CHANNEL}"), 
             ],[
             InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
             InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
@@ -134,7 +134,7 @@ async def commands_set(_, query: CallbackQuery):
 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ (`! / .`) ʜᴀɴᴅʟᴇʀ""",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/{GROUP_SUPPORT}"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/{UPDATES_CHANNEL}"), 
             ],[
             InlineKeyboardButton("🏹ᴏᴡɴᴇʀ ᴄᴍᴅs✅", callback_data="owner_command"), 
             InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
