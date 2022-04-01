@@ -94,8 +94,8 @@ async def start_(c: Client, message: Message):
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ **
 """,
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/santhuvc"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/{GROUP_SUPPORT}"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/{UPDATES_CHANNEL}"), 
             ],[
             InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
             InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
@@ -126,7 +126,7 @@ async def help(c: Client, message: Message):
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ],[
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
-            InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/santhuvc")
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/{GROUP_SUPPORT}")
             ]]
             ) 
         )  
