@@ -31,8 +31,8 @@ async def start_set(_, query: CallbackQuery):
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ ᴀɴʏ ʜᴇʟᴘ ʏᴏᴜ ᴡᴀɴᴛ ᴛʏᴘᴇ /help **
 """, 
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url=f"https://t.me/{GROUP_SUPPORT}"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/musicupdates12"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/santhubotupadates"), 
             ],[
             InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
             InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
@@ -62,7 +62,7 @@ async def help(_, query: CallbackQuery):
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ],[
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
-            InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}")
+            InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/musicupdates12")
             ]]
             ) 
         )  
