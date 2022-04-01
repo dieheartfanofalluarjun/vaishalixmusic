@@ -6,7 +6,6 @@ from time import time
 import random
 
 from config import (
-    PING_IMG, 
     UPTIME_IMG, 
     START_IMG_URL, 
     ALIVE_IMG,
@@ -220,19 +219,7 @@ async def ping_pong(c: Client, message: Message):
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
     delta_ping = time() - start
     await m_reply.edit_text("💝 `ᴘᴏɴɢ!!`\n" f"💖 `{delta_ping * 1000:.3f} ms`")
-    await message.reply_photo("PING_IMG")
-    reply_markup=InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("💖ɴᴇᴛᴡᴏʀᴋ💖", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "💚ᴄʜᴀɴɴᴇʟ💚", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
-            ]
-        ]
-    )
 
-    
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 @check_blacklist()
 async def get_uptime(c: Client, message: Message):
@@ -247,7 +234,6 @@ async def get_uptime(c: Client, message: Message):
                 f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
                 f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
               ) 
-
     keyboard = InlineKeyboardMarkup(
         [
             [
