@@ -151,9 +151,9 @@ async def bot_statistic(c: Client, message: Message):
     await msg.edit(tgm, disable_web_page_preview=True)
 
 
-@Client.on_message(command(["calls", f"calls@{uname}"]) & ~filters.edited)
+@Client.on_message(command(["chats", f"chats@{uname}"]) & ~filters.edited)
 @sudo_users_only
-async def active_calls(c: Client, message: Message):
+async def active_chats(c: Client, message: Message):
     served_chats = []
     try:
         chats = await get_active_chats()
