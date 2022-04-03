@@ -62,7 +62,7 @@ async def help(_, query: CallbackQuery):
             InlineKeyboardButton("ᴜsᴇʀ ᴄᴍᴅs", callback_data="user_command")
             ],[
             InlineKeyboardButton("ᴄᴏᴍᴍᴀɴᴅs ʟɪsᴛ", callback_data="command_list"), 
-            InlineKeyboardButton("ɢʀᴏᴜᴘ", url=f"https://t.me/musicupdates12")
+            InlineKeyboardButton("ɪᴅ", callback_data="id")
             ]]
             ) 
         )  
@@ -308,3 +308,14 @@ async def repo(_, query: CallbackQuery):
     user_id = query.from_user.id
     BOT_NAME = me_bot.first_name
     await query.answer("🏹 sᴀɴᴛʜᴜ ᴍᴜsɪᴄ ʀᴇᴘᴏ ɪs ᴄᴏᴍᴘʟᴇᴛᴇ ᴄʟᴏsᴇᴅ ʀᴇᴘᴏ ʙᴜᴛ ɪᴀᴍ ʀᴇʟᴇᴀsᴇ sᴏᴏɴ ᴘʟᴢ ᴄᴏᴍᴘʟᴇᴛᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.", show_alert=True)
+
+@Client.on_callback_query(filters.regex("id"))
+@check_blacklist()
+async def id(_, query: CallbackQuery):
+    BOT_NAME = me_bot.first_name
+    await query.answer("chat id")
+    await query.edit_message_text(
+        f"""✨ **ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+/id ᴛʏᴘᴇ ɪᴅ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀʀᴇ ᴘᴇʀsᴏɴᴀʟ 
+
+/id ʀᴇᴘʟʏ ᴛᴏ [ᴜsᴇʀ ɴᴀᴍᴇ]
