@@ -320,4 +320,7 @@ async def id(_, query: CallbackQuery):
 /id ᴛʏᴘᴇ ɪᴅ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀʀᴇ ᴘᴇʀsᴏɴᴀʟ ! 
 
 /id ʀᴇᴘʟʏ ᴛᴏ [ᴜsᴇʀ ɴᴀᴍᴇ]""", 
-        ) 
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("◁", callback_data="help_command")]]
+        ),
+    )
