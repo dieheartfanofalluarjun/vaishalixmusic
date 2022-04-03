@@ -150,13 +150,4 @@ async def bot_statistic(c: Client, message: Message):
     
     await msg.edit(tgm, disable_web_page_preview=True)
 
-@Client.on_message(command(["id", f"id@{uname}"]) & ~filters.edited)
-@sudo_users_only
-async def bot_statistic(c: Client, message: Message):
-    text = """
-**ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ** : `{}`"""
-    await message.reply_text(
-        text=text.format(
-            message.chat.id
-        ), 
-    ) 
+
