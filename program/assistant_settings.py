@@ -53,12 +53,12 @@ async def leave_chat(_, m: Message):
         await remove_active_chat(chat_id)
         return await _.send_message(
             chat_id,
-            "✅ userbot leaved chat",
+            "✅ ᴜsᴇʀʙᴏᴛ ʟᴇᴀᴠᴇᴅ ᴄʜᴀᴛ",
         )
     except UserNotParticipant:
         return await _.send_message(
             chat_id,
-            "❌ userbot already leave chat",
+            "❌ ᴜsᴇʀʙᴏᴛ ᴀʟʀᴇᴀᴅʏ ʟᴇᴀᴠᴇ ᴄʜᴀᴛ",
         )
 
 
@@ -71,33 +71,33 @@ async def leave_all(client, message):
     left = 0
     failed = 0
     
-    msg = await message.reply("🔄 Userbot leaving all Group !")
+    msg = await message.reply("🔄 ᴜsᴇʀʙᴏᴛ ʟᴇᴀᴠɪɴɢ ᴀʟʟ ɢʀᴏᴜᴘ !")
     async for dialog in user.iter_dialogs():
         try:
             await user.leave_chat(dialog.chat.id)
             await remove_active_chat(dialog.chat.id)
             left += 1
             await msg.edit(
-                f"Userbot leaving all Group...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f"ᴜsᴇʀʙᴏᴛ ʟᴇᴀᴠɪɴɢ ᴀʟʟ ɢʀᴏᴜᴘ...\n\nʟᴇғᴛ: {left} ᴄʜᴀᴛs.\nғᴀɪʟᴇᴅ: {failed} ᴄʜᴀᴛs."
             )
         except BaseException:
             failed += 1
             await msg.edit(
-                f"Userbot leaving...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f"ᴜsᴇʀʙᴏᴛ ʟᴇᴀᴠɪɴɢ...\n\nʟᴇғᴛ: {left} ᴄʜᴀᴛs.\nғᴀɪʟᴇᴅ: {failed} ᴄʜᴀᴛs."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
     await client.send_message(
-        message.chat.id, f"✅ Left from: {left} chats.\n❌ Failed in: {failed} chats."
+        message.chat.id, f"✅ ʟᴇғᴛ ғʀᴏᴍ: {left} ᴄʜᴀᴛs.\n❌ ғᴀɪʟᴇᴅ ɪɴ: {failed} ᴄʜᴀᴛs."
     )
 
 
-@Client.on_message(command(["startvc", f"startvc@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["vc_on", f"vc_on@{BOT_USERNAME}"]) & other_filters)
 @check_blacklist()
 @authorized_users_only
 async def start_group_call(c: Client, m: Message):
     chat_id = m.chat.id
-    msg = await c.send_message(chat_id, "`starting...`")
+    msg = await c.send_message(chat_id, "❖**sᴛᴀʀᴛɪɴɢ ᴠᴄ...**")
     try:
         peer = await user.resolve_peer(chat_id)
         await user.send(
@@ -109,32 +109,32 @@ async def start_group_call(c: Client, m: Message):
                 random_id=user.rnd_id() // 9000000000,
             )
         )
-        await msg.edit_text("✅ Group call started !")
+        await msg.edit_text("🔥 ɢʀᴏᴜᴘ ᴄᴀʟʟ sᴛᴀʀᴛᴇᴅ !")
     except ChatAdminRequired:
         await msg.edit_text(
-            "The userbot is not admin in this chat. To start the Group call you must promote the userbot as admin first with permission:\n\n» ❌ manage_video_chats"
+            "ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ɪs ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ. ᴛᴏ sᴛᴀʀᴛ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ ʏᴏᴜ ᴍᴜsᴛ ᴘʀᴏᴍᴏᴛᴇ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ᴀs ᴀᴅᴍɪɴ ғɪʀsᴛ ᴡɪᴛʜ ᴘᴇʀᴍɪssɪᴏɴ:\n\n» 💗 ᴍᴀɴᴀɢᴇ_ᴠɪᴅᴇᴏ_ᴄʜᴀᴛs"
         )
 
 
-@Client.on_message(command(["stopvc", f"stopvc@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["vc_stop", f"vc_stop@{BOT_USERNAME}"]) & other_filters)
 @check_blacklist()
 @authorized_users_only
 async def stop_group_call(c: Client, m: Message):
     chat_id = m.chat.id
-    msg = await c.send_message(chat_id, "`stopping...`")
+    msg = await c.send_message(chat_id, "❖**sᴛᴏᴘᴘɪɴɢ ᴠᴄ**...")
     if not (
         group_call := (
-            await get_calls(m, err_msg="group call not active")
+            await get_calls(m, err_msg="ɢʀᴏᴜᴘ ᴄᴀʟʟ ɴᴏᴛ ᴀᴄᴛɪᴠᴇ")
         )
     ):
-        await msg.edit_text("❌ The group call already ended")
+        await msg.edit_text("❌ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ ᴀʟʀᴇᴀᴅʏ ᴇɴᴅᴇᴅ")
         return
     await user.send(
         DiscardGroupCall(
             call=group_call
         )
     )
-    await msg.edit_text("✅ Group call has ended !")
+    await msg.edit_text("💝 ɢʀᴏᴜᴘ ᴄᴀʟʟ ʜᴀs ᴇɴᴅᴇᴅ !")
 
 
 @Client.on_message(filters.left_chat_member)
