@@ -316,6 +316,7 @@ async def id(_, query: CallbackQuery):
     await query.answer("chat id")
     await query.edit_message_text(
         f"""✨ **ʜᴇʟʟᴏ [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
+
 /id ᴛʏᴘᴇ ɪᴅ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀʀᴇ ᴘᴇʀsᴏɴᴀʟ 
 
 /id ʀᴇᴘʟʏ ᴛᴏ [ᴜsᴇʀ ɴᴀᴍᴇ]
