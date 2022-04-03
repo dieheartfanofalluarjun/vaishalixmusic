@@ -313,13 +313,4 @@ async def chat_watcher_func(_, message: Message):
             f"👮🏼 (> {suspect} <)\n\n**Gbanned** user detected, that user has been gbanned by sudo user and was blocked from this Chat !\n\n🚫 **Reason:** potential spammer and abuser."
         )
 
-@Client.on_message(command(["id", f"id@{uname}"]) & ~filters.edited)
-@sudo_users_only
-async def bot_statistic(c: Client, message: Message):
-    text = """
-**ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ** : `{}`"""
-    await message.reply_text(
-        text=text.format(
-            message.chat.id
-        ), 
-    ) 
+
