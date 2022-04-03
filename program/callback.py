@@ -320,3 +320,4 @@ async def id(_, query: CallbackQuery):
 /id ᴛʏᴘᴇ ɪᴅ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀʀᴇ ᴘᴇʀsᴏɴᴀʟ ! 
 
 /id ʀᴇᴘʟʏ ᴛᴏ [ᴜsᴇʀ ɴᴀᴍᴇ]""", 
+        ) 
