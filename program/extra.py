@@ -150,37 +150,13 @@ async def bot_statistic(c: Client, message: Message):
     
     await msg.edit(tgm, disable_web_page_preview=True)
 
-
-@Client.on_message(command(["chats", f"chats@{uname}"]) & ~filters.edited)
+@Client.on_message(command(["id", f"id@{uname}"]) & ~filters.edited)
 @sudo_users_only
-async def active_chats(c: Client, message: Message):
-    served_chats = []
-    try:
-        chats = await get_active_chats()
-        for chat in chats:
-            served_chats.append(int(chat["chat_id"]))
-    except Exception as e:
-        traceback.print_exc()
-        await message.reply_text(f"🚫 ᴇʀʀᴏʀ: `{e}`")
-    text = ""
-    j = 0
-    for x in served_chats:
-        try:
-            title = (await c.get_chat(x)).title
-        except Exception:
-            title = "Private Group"
-        if (await c.get_chat(x)).username:
-            user = (await c.get_chat(x)).username
-            text += (
-                f"**{j + 1}.** [{title}](https://t.me/{user}) [`{x}`]\n"
-            )
-        else:
-            text += f"**{j + 1}.** {title} [`{x}`]\n"
-        j += 1
-    if not text:
-        await message.reply_text("❌ ɴᴏ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟs")
-    else:
-        await message.reply_text(
-            f"✏️ **ʀᴜɴɴɪɴɢ ɢʀᴏᴜᴘ ᴄᴀʟʟ ʟɪsᴛ:**\n\n{text}\n\n❖ ᴛʜɪs ɪs ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀʟʟ ᴄᴜʀʀᴇɴᴛ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ.",
-            disable_web_page_preview=True,
-        )
+async def bot_statistic(c: Client, message: Message):
+    text = """
+ᴛʜɪs ɪs ʏᴏᴜʀ ᴄʜᴀᴛ ɪᴅ : `{}`"""
+    await message.reply_text(
+        text=text.format(
+            message.chat.id
+        ), 
+    ) 
