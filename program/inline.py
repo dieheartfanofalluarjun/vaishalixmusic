@@ -7,39 +7,42 @@ from pyrogram.types import (
 from youtubesearchpython import VideosSearch
 
 
-async def thumb(thumbnail, title, userid, ctitle):
-    if os.path.isfile(f"cache/{userid}.png"):
-        return f"cache/{userid}.png"
+@Client.on_inline_query()
+async def inline(client: Client, query: InlineQuery):
+    answers = []
+    search_query = query.query.lower().strip().rstrip()
 
-    url = f"https://www.youtube.com/watch?v={userid}"
-    try:
-        results = VideosSearch(url, limit=1)
-        for result in (await results.next())["result"]:
-            try:
-                title = result["title"]
-                title = re.sub("\W+", " ", title)
-                title = title.title()
-            except:
-                title = "Unsupported Title"
-            try:
-                duration = result["duration"]
-            except:
-                duration = "Unknown Mins"
-            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-            try:
-                views = result["viewCount"]["short"]
-            except:
-                views = "Unknown Views"
-            try:
-                channel = result["channel"]["name"]
-            except:
-                channel = "Unknown Channel"
+    if search_query == "":
+        await client.answer_inline_query(
+            query.id,
+            results=answers,
+            switch_pm_text="type a youtube video name...",
+            switch_pm_parameter="help",
+            cache_time=0,
+        )
+    else:
+        search = VideosSearch(search_query, limit=50)
 
-        async with aiohttp.ClientSession() as session:
-            async with session.get(thumbnail) as resp:
-                if resp.status == 200:
-                    f = await aiofiles.open(
-                        f"cache/thumb{userid}.png", mode="wb"
-                    )
-                    await f.write(await resp.read())
-                    await f.close()
+        for result in search.result()["result"]:
+            answers.append(
+                InlineQueryResultArticle(
+                    title=result["title"],
+                    description="{}, {} views.".format(
+                        result["duration"], result["viewCount"]["short"]
+                    ),
+                    input_message_content=InputTextMessageContent(
+                        "🔗 https://www.youtube.com/watch?v={}".format(result["id"])
+                    ),
+                    thumb_url=result["thumbnails"][0]["url"],
+                )
+            )
+
+        try:
+            await query.answer(results=answers, cache_time=0)
+        except errors.QueryIdInvalid:
+            await query.answer(
+                results=answers,
+                cache_time=0,
+                switch_pm_text="error: search timed out",
+                switch_pm_parameter="",
+            )
