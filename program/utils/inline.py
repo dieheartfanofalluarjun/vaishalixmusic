@@ -11,12 +11,12 @@ from pyrogram.types import (
 def stream_markup(user_id):
   buttons = [
     [
-      InlineKeyboardButton(text="❣️ᴍᴇɴᴜ", callback_data=f'stream_menu_panel
+      InlineKeyboardButton(text="❣️ᴍᴇɴᴜ", callback_data=f'stream_menu_panel | {user_id}'),
       InlineKeyboardButton(text="💘ɴᴇᴛᴡᴏʀᴋ📡", url="https://t.me/santhubotupadates"),
       InlineKeyboardButton(text="💖ɢʀᴏᴜᴘ💝", url="https://t.me/musicupdates12"),
     ], 
     [ 
-      InlineKeyboardButton(text="🗑ʙɪɴ", callback_data=f'set_close'),
+      InlineKeyboardButton(text="🗑ʙɪɴ", callback_data=f'set_close')
     ]
   ]
   return buttons
