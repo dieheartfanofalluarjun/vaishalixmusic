@@ -35,7 +35,7 @@ async def start_set(_, query: CallbackQuery):
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/santhubotupadates"), 
             ],[
             InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/Santhugroupmentionbot"), 
             ],[
             InlineKeyboardButton("📚sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="sudo_command"), 
             InlineKeyboardButton("📁ᴀᴅᴍɪɴ ᴄᴍᴅs", callback_data="admin_command"), 
