@@ -12,7 +12,7 @@ def stream_markup(user_id):
   buttons = [
     [
       InlineKeyboardButton(text="💘ɴᴇᴛᴡᴏʀᴋ📡", url="https://t.me/santhubotupadates"),
-      InlineKeyboardButton(text="💖ɢʀᴏᴜᴘ💝", url="https://t.me/santhuvc"),
+      InlineKeyboardButton(text="💖ɢʀᴏᴜᴘ💝", url="https://t.me/musicupdates12"),
     ], 
     [ 
       InlineKeyboardButton(text="🗑ʙɪɴ", callback_data=f'set_close'),
@@ -43,7 +43,7 @@ close_mark = InlineKeyboardMarkup(
   [
     [
       InlineKeyboardButton(
-        "🗑 ᴄʟᴏsᴇ", callback_data="set_close"
+        "🗑ʙɪɴ", callback_data="set_close"
       )
     ]
   ]
