@@ -58,51 +58,33 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
-force_channel = "santhubotupadates"
 
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 @check_blacklist()
 async def start_(c: Client, message: Message):
-    if force_channel:
-        try:
-            user = await bot.get_chat_member(force_channel, message.from_user.id) 
-            if user.status == "kicked out":
-                await message.reply_text("You are banned") 
-                return
-        except UserNotParticipant:
-            await message.reply_photo(
-                photo=random.choice(START_IMG_URL),
-                caption="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
-                reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("🔰ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔰", url=f"t.me/{force_channel}") 
-                 ]]
-                ) 
-            )
-            return
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_photo(
         photo=random.choice(START_IMG_URL), 
-        caption= f"""💝 **ᴡᴇʟᴄᴏᴍᴇ🎉 {message.from_user.mention()} !**\n
-😁 [{me_bot.first_name}](https://t.me/{BOT_USERNAME}) **ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ🎶 ᴀɴᴅ ᴠɪᴅᴇᴏ🎥 ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ!**
+        caption= f"""👋🏻 **ʜᴇʟʟᴏ** **ᴡᴇʟᴄᴏᴍᴇ🎉 {message.from_user.mention()} !**\n
+👻 [{me_bot.first_name}](https://t.me/{BOT_USERNAME}) **ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴘʟᴀʏ ᴍᴜsɪᴄ🎶 ᴀɴᴅ ᴠɪᴅᴇᴏ🎥 ᴏɴ ɢʀᴏᴜᴘs ᴛʜʀᴏᴜɢʜ ᴛʜᴇ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ!**
 
-💚 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇʏ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 🛠️ ᴄʜᴇᴄᴋ ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ!**
+💞 **ғɪɴᴅ ᴏᴜᴛ ᴀʟʟ ᴛʜᴇ ʙᴏᴛ's ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ʜᴏᴡ ᴛʜᴇʏ ᴡᴏʀᴋ ʙʏ ᴄʟɪᴄᴋɪɴɢ ᴏɴ ᴛʜᴇ » 🛠️ ᴄʜᴇᴄᴋ ᴄᴏᴍᴍᴀɴᴅs ʙᴜᴛᴛᴏɴ!**
 
-💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ  ᴀɴʏ ʜᴇʟᴘ ʏᴏᴜ ᴡᴀɴᴛ ᴛʏᴘᴇ /help **
+🙄 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ  ᴀɴʏ ʜᴇʟᴘ ʏᴏᴜ ᴡᴀɴᴛ ᴛʏᴘᴇ /help **
 """,
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/musicupdates12"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/{GROUP_SUPPORT}"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/{UPDATES_CHANNEL}"), 
             ],[
-            InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/{OWNER_USERNAME}"), 
             ],[
             InlineKeyboardButton("📚sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="sudo_command"), 
             InlineKeyboardButton("📁ᴀᴅᴍɪɴ ᴄᴍᴅs", callback_data="admin_command"), 
             ],[
-            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
         ) 
@@ -166,7 +148,7 @@ async def ghelp(c: Client, message: Message):
                 )
             ],
             [
-                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url="https://t.me/musicupdates12"),
+                InlineKeyboardButton("💝ɴᴇᴛᴡᴏʀᴋ💝", url="https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
                     "◁", callback_data="home_start"
                 ),
@@ -196,7 +178,7 @@ async def alive(c: Client, message: Message):
             [
                 InlineKeyboardButton("💖ɴᴇᴛᴡᴏʀᴋ💖", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "💚ᴄʜᴀɴɴᴇʟ💚", url="https://t.me/musicupdates12"
+                    "💚ᴄʜᴀɴɴᴇʟ💚", url="https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -228,23 +210,13 @@ async def get_uptime(c: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_photo(
         photo=(UPTIME_IMG), 
-        caption="😊 sᴀɴᴛʜᴜ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
+        caption="😊 ᴅᴇᴠɪʟ ʙᴏᴛ sᴛᴀᴛᴜs:\n"
                 f"• **ᴜᴘᴛɪᴍᴇ:** `{uptime}`\n"
                 f"• **ᴜsᴇʀ:** `{message.from_user.mention()}`\n"
                 f"• **sᴛᴀʀᴛ ᴛɪᴍᴇ:** `{START_TIME_ISO}`\n"
                 f"• **ᴘᴏᴡᴇʀᴇᴅ ʙʏ:** `{GROUP_SUPPORT}`"
               ) 
-    keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("💖ɴᴇᴛᴡᴏʀᴋ💖", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton(
-                    "💚ᴄʜᴀɴɴᴇʟ💚", url=f"https://t.me/{UPDATES_CHANNEL}"
-                ),
-            ]
-        ]
-    )
-
+    
 
 @Client.on_chat_join_request()
 async def approve_join_chat(c: Client, m: ChatJoinRequest):

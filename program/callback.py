@@ -31,16 +31,15 @@ async def start_set(_, query: CallbackQuery):
 💝 **ᴛᴏ ᴋɴᴏᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ᴘʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ » 💚 ʀᴇᴀᴅ ʙᴀsɪᴄ ɢᴜɪᴅᴇ ʙᴜᴛᴛᴏɴ ᴀɴʏ ʜᴇʟᴘ ʏᴏᴜ ᴡᴀɴᴛ ᴛʏᴘᴇ /help **
 """, 
         reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/musicupdates12"), 
-            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/santhubotupadates"), 
+            InlineKeyboardButton("🔥sᴜᴘᴘᴏʀᴛ💖", url="https://t.me/{GROUP_SUPPORT}"), 
+            InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url="https://t.me/{UPDATES_CHANNEL}"), 
             ],[
-            InlineKeyboardButton("💙ʀᴇᴘᴏ💙", callback_data="repo"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/Santhugroupmentionbot"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/{OWNER_USERNAME}"), 
             ],[
             InlineKeyboardButton("📚sᴜᴅᴏ ᴄᴏᴍᴍᴀɴᴅs", callback_data="sudo_command"), 
             InlineKeyboardButton("📁ᴀᴅᴍɪɴ ᴄᴍᴅs", callback_data="admin_command"), 
             ],[
-            InlineKeyboardButton("➕𝐀𝐃𝐃 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("✚ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✚", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ]]
             ) 
         ) 
@@ -80,7 +79,7 @@ async def quick_set(_, query: CallbackQuery):
 
 🥁 /vstream - ᴛʏᴘᴇ ᴛʜɪs ᴡɪᴛʜ ɢɪᴠᴇ ᴛʜᴇ ʏᴏᴜᴛᴜʙᴇ ʟɪᴠᴇ sᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏ ʟɪɴᴋ ᴏʀ ᴍ𝟹ᴜ𝟾 ʟɪɴᴋ ᴛᴏ ᴘʟᴀʏ ʟɪᴠᴇ ᴠɪᴅᴇᴏ. (ʀᴇᴍᴇᴍʙᴇʀ ᴛᴏ ᴅᴏɴ'ᴛ ᴘʟᴀʏ ʟᴏᴄᴀʟ ᴀᴜᴅɪᴏ/video ғɪʟᴇs ᴏʀ ɴᴏɴ-ʟɪᴠᴇ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ʙʏ ᴜsɪɴɢ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!, ʙᴇᴄᴀᴜsᴇ ɪᴛ ᴡɪʟʟ ᴄᴀᴜsᴇ ᴜɴғᴏʀᴇsᴇᴇɴ ᴘʀᴏʙʟᴇᴍs.)
 
-🤨 sᴛɪʟʟ ʜᴀᴠᴇ ǫᴜᴇsᴛɪᴏɴs? ᴄᴏɴᴛᴀᴄᴛ ᴜs ɪɴ [sᴀɴᴛʜᴜ ᴠᴄ](https://t.me/{GROUP_SUPPORT}).""",
+🤨 ʏᴏᴜ ʜᴀᴠᴇ ǫᴜᴇsᴛɪᴏɴs? ᴄᴏɴᴛᴀᴄᴛ ᴜs ɪɴ [ᴅᴇᴠɪʟ sᴜᴘᴘᴏʀᴛ](https://t.me/{GROUP_SUPPORT}).""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [InlineKeyboardButton("◁", callback_data="command_list")]    
@@ -101,7 +100,7 @@ async def guide_set(_, query: CallbackQuery):
 𝟷.) ғɪʀsᴛ, ᴀᴅᴅ ᴛʜɪs ʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
 𝟸.) ᴛʜᴇɴ, ᴘʀᴏᴍᴏᴛᴇ ᴛʜɪs ʙᴏᴛ ᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀ ᴏɴ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀʟsᴏ ɢɪᴠᴇ ᴀʟʟ ᴘᴇʀᴍɪssɪᴏɴs ᴇxᴄᴇᴘᴛ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ.
 𝟹.) ᴀғᴛᴇʀ ᴘʀᴏᴍᴏᴛɪɴɢ ᴛʜɪs ʙᴏᴛ, ᴛʏᴘᴇ /reload ɪɴ ɢʀᴏᴜᴘ ᴛᴏ ᴜᴘᴅᴀᴛᴇ ᴛʜᴇ ᴀᴅᴍɪɴ ᴅᴀᴛᴀ.
-𝟹.) ɪɴᴠɪᴛᴇ @santhu_music_bot ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴏʀ ᴛʏᴘᴇ /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ʜᴇʀ, ᴜɴғᴏʀᴛᴜɴᴀᴛᴇʟʏ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ᴡɪʟʟ ᴊᴏɪɴᴇᴅ ʙʏ ɪᴛsᴇʟғ ᴡʜᴇɴ ʏᴏᴜ ᴜsᴇ sᴏɴɢ ᴘʟᴀʏɪɴɢ ᴄᴏᴍᴍᴀɴᴅs.
+𝟹.) ɪɴᴠɪᴛᴇ {ass_uname} ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴏʀ ᴛʏᴘᴇ /userbotjoin ᴛᴏ ɪɴᴠɪᴛᴇ ʜᴇʀ, ᴜɴғᴏʀᴛᴜɴᴀᴛᴇʟʏ ᴛʜᴇ ᴜsᴇʀʙᴏᴛ ᴡɪʟʟ ᴊᴏɪɴᴇᴅ ʙʏ ɪᴛsᴇʟғ ᴡʜᴇɴ ʏᴏᴜ ᴜsᴇ sᴏɴɢ ᴘʟᴀʏɪɴɢ ᴄᴏᴍᴍᴀɴᴅs.
 𝟺.) ᴛᴜʀɴ ᴏɴ /start ᴠɪᴅᴇᴏ ᴄʜᴀᴛ ғɪʀsᴛ ʙᴇғᴏʀᴇ sᴛᴀʀᴛ ᴛᴏ ᴘʟᴀʏ ᴠɪᴅᴇᴏ /music.
 
 ʀᴇᴀᴅ 
@@ -137,7 +136,7 @@ async def commands_set(_, query: CallbackQuery):
             InlineKeyboardButton("💘ᴄʜᴀɴɴᴇʟ💝", url=f"https://t.me/{UPDATES_CHANNEL}"), 
             ],[
             InlineKeyboardButton("🏹ᴏᴡɴᴇʀ ᴄᴍᴅs✅", callback_data="owner_command"), 
-            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/santhu_music_bot"), 
+            InlineKeyboardButton("🔰ᴅᴏɴᴀᴛᴇ🔰", url="https://t.me/{OWNER_USERNAME}"), 
             ],[
             InlineKeyboardButton("🔥ǫᴜɪᴄᴋ ᴜsᴇ🔥", callback_data="quick_use"), 
             InlineKeyboardButton("🔰ᴜsᴇʀ ɢᴜɪᴅᴇ💗", callback_data="user_guide"), 
