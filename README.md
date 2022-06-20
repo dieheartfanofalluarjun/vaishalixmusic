@@ -1,10 +1,10 @@
 <p align="center">
-    <br><b>santhu music is an Advanced Telegram Bot that's allow you to play Video & Music on Telegram Group Video Chat</b><br>
+    <br><b>devil music is an Advanced Telegram Bot that's allow you to play Video & Music on Telegram Group Video Chat</b><br>
 </p>
 
 ## Preview
 <p align="center">
-  <img src="https://telegra.ph/file/61a5e31485a77e7726740.jpg">
+  <img src="https://te.legra.ph/file/73d9cf3c480108f67da39.jpg">
 </p>
 
     
