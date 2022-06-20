@@ -58,29 +58,12 @@ async def _human_time_duration(seconds):
             parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else "s"))
     return ", ".join(parts)
 
-force_channel = "santhubotupadates"
 
 @Client.on_message(
     command(["start", f"start@{BOT_USERNAME}"]) & filters.private & ~filters.edited
 )
 @check_blacklist()
 async def start_(c: Client, message: Message):
-    if force_channel:
-        try:
-            user = await bot.get_chat_member(force_channel, message.from_user.id) 
-            if user.status == "kicked out":
-                await message.reply_text("You are banned") 
-                return
-        except UserNotParticipant:
-            await message.reply_photo(
-                photo=random.choice(START_IMG_URL),
-                caption="ʏᴏᴜʀ ɴᴏᴛ sᴜʙsᴄʀɪʙᴇ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇ ᴀɴᴅ ᴜsᴇ ᴍᴇ..🔥", 
-                reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("🔰ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ🔰", url=f"t.me/{force_channel}") 
-                 ]]
-                ) 
-            )
-            return
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_photo(
